@@ -104,7 +104,7 @@ async def ytdl(link):
         return 0, stderr.decode()
 
 
-@Client.on_message(filters.command(["play", "شغل", "ديشا", "فرعون", "مينا"], prefixes=f"{HNDLR}"))
+@Client.on_message(filters.command(["play","شغل", "تشغيل"], prefixes=f"{HNDLR}"))
 async def play(client, m: Message):
     replied = m.reply_to_message
     chat_id = m.chat.id
@@ -161,7 +161,7 @@ async def play(client, m: Message):
             await m.reply("😐الرد على ملف صوتي أو إعطاء شيء للبحث")
         else:
             await m.delete()
-            huehue = await m.reply("🔎 انتظر قليلا 😉💕..")
+            huehue = await m.reply("🔎 ويت يقلبيي 💕..")
             query = m.text.split(None, 1)[1]
             search = ytsearch(query)
             if search == 0:
@@ -282,7 +282,7 @@ async def vplay(client, m: Message):
             await m.reply("**الرد على ملف الفيديو أو إعطاء شيء للبحث**")
         else:
             await m.delete()
-            huehue = await m.reply("**🔎 انتظر قليلا 😉💕")
+            huehue = await m.reply("**🔎 ويت يقلبيي 💕")
             query = m.text.split(None, 1)[1]
             search = ytsearch(query)
             Q = 720
@@ -408,4 +408,4 @@ async def playlist(client, m: Message):
                 QUE = QUE + "\n" + f"**#{x}** - [{hmm}]({hmmm}) | `{hmmmm}`\n"
             await m.reply(QUE, disable_web_page_preview=True)
     else:
-        await m.reply("**🚫 والله مفي حاجه شغاله دانتو تجيبو المرض 😏**")
+        await m.reply("**🚫  مفيش حاجه شغاله **)
