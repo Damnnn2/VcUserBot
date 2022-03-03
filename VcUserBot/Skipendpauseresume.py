@@ -48,11 +48,11 @@ async def stop(client, m: Message):
         try:
             await call_py.leave_group_call(chat_id)
             clear_queue(chat_id)
-            await m.reply("**وقف اهو لم نشوف اخرتها 😏🙄**")
+            await m.reply("** وقف اهو**")
         except Exception as e:
             await m.reply(f"**ERROR** \n`{e}`")
     else:
-        await m.reply("**🤨مفيش حاجه شغاله هنستعبط علي بعض 😏 !**")
+        await m.reply("** مفيش حاجه شغاله 😏 !**")
 
 
 @Client.on_message(filters.command(["pause", "اقفل شاشه"], prefixes=f"{HNDLR}"))
